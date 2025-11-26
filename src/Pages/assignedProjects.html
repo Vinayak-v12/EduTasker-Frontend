@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigned Projects</title>
+    <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-full px-6 py-5 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-blue-600">EduTasker</h1>
+
+            <div class="hidden md:flex gap-8 text-gray-700 font-medium">
+                <a href="/src/Pages/InsDashboard.html" class="hover:text-blue-600 transition">Dashboard</a>
+                <a href="/src/Pages/CreateProject.html" class="hover:text-blue-600 transition">Create Project</a>
+                <a href="#" class="hover:text-blue-600 transition font-semibold">Track Progress</a>
+                <a href="#" class="hover:text-blue-600 transition">Feedback</a>
+            </div>
+
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <section class="max-w-5xl mx-auto text-center mt-12">
+        <h1 class="text-4xl font-bold text-gray-800">Assigned Projects</h1>
+        <p class="text-gray-600 mt-2">Projects assigned to students with deadlines & descriptions</p>
+    </section>
+
+    <!-- Projects Container -->
+    <section class="max-w-6xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6" id="projectsContainer">
+        
+        <!-- JS will insert project cards here -->
+
+    </section>
+
+    <!-- JS -->
+    <script src="/src/Scripts/assignedProjects.js"></script>
+
+</body>
+</html>

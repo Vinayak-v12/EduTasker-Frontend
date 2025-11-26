@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+  <title>Register</title>
+</head>
+<body>
+      
+<body class="bg-gray-100 min-h-screen flex justify-center items-center">
+
+  <div class="bg-white shadow-lg rounded-xl p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold text-center mb-6">Create Account</h2>
+
+    <form id="form" class="flex flex-col gap-4">
+
+      <!-- Username -->
+      <div class="flex flex-col text-left">
+        <label class="font-medium mb-1">Username:</label>
+        <input 
+          type="text" 
+          placeholder="Enter your name"
+          id="Username"
+          class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="flex flex-col text-left">
+        <label class="font-medium mb-1">Email:</label>
+        <input 
+          type="email" 
+          placeholder="Enter your email"
+          id="email"
+          class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+      </div>
+      <!--Role-->
+      <div class="flex flex-col text-left">
+        <label class="font-medium mb-1">Select your Role:</label>
+        <select id="role" class="border border-gray-300  rounded-lg px-3 py-2 focus:outline-none">
+          <option value="Student" class="bg-blue-100">Student</option>
+          <option value="Instructor" class="bg-blue-100">Instructor</option>
+        </select>
+      </div>
+
+      <!-- Password -->
+      <div class="flex flex-col text-left">
+        <label class="font-medium mb-1">Password:</label>
+        <input 
+          type="password" 
+          placeholder="Create your password"
+          id="password"
+          class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      
+      <!-- Submit -->
+      <button id="btn" 
+        type="submit" 
+        class="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition font-semibold mt-4">
+        Register
+      </button>
+
+    </form>
+
+    <p class="text-center text-sm mt-4">
+      Already have an account?
+      <a href="/src/Pages/StudentLogin.html" class="text-blue-600 font-medium hover:underline">Login</a>
+    </p>
+
+  </div>
+  <script src="/src/Scripts/Resgister.js"></script>
+</body>
+</html>

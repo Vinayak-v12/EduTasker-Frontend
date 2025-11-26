@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Project</title>
+
+    <!-- Tailwind -->
+    <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <h1 class="text-2xl font-bold text-blue-600">EduTasker</h1>
+
+            <div class="flex gap-8 text-gray-700 font-medium">
+                <a href="InsDashboard.html" class="hover:text-blue-600 transition">Dashboard</a>
+                <a href="assignedProjects.html" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#" class="hover:text-blue-600 transition">Feedback</a>
+            </div>
+
+            <button onclick="logout()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    
+    <!-- PAGE BODY -->
+    <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-lg">
+
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Create New Project</h2>
+
+        <form id="projectForm" class="space-y-6">
+
+            <!-- Title -->
+            <div>
+                <label class="block font-medium text-gray-700 mb-1">Project Title</label>
+                <input type="text" id="title"
+                       class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                       placeholder="Enter project title" required>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block font-medium text-gray-700 mb-1">Project Description</label>
+                <textarea id="description" rows="4"
+                          class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                          placeholder="Enter project details" required></textarea>
+            </div>
+
+            <!-- Deadline -->
+            <div>
+                <label class="block font-medium text-gray-700 mb-1">Deadline</label>
+                <input type="datetime-local" id="deadline"
+                       class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                       required>
+            </div>
+
+            <!-- Assigned Students -->
+            <div>
+                <label class="block font-medium text-gray-700 mb-1">Assign to Students (IDs)</label>
+                <input type="text" id="assignedStudents"
+                       class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                       placeholder="e.g. 1, 2, 3" required>
+                <p class="text-sm text-gray-500 mt-1">Enter comma-separated student IDs</p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+                Create Project
+            </button>
+        </form>
+
+        <!-- Success/Fail Message -->
+        <p id="responseMessage" class="mt-4 text-center text-lg font-medium"></p>
+
+    </div>
+
+    <script src="/src/Scripts/createproject.js"></script>
+
+</body>
+</html>

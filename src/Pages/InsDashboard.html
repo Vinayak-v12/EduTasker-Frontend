@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+  <title>Instructor Dashboard</title>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- ---------------- NAVBAR ---------------- -->
+<nav class="bg-white shadow-md">
+    <div class="max-w-full mx-auto px-8 py-4 flex items-center justify-between">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <h1 class="text-3xl font-bold text-blue-600">EduTasker</h1>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden md:flex gap-10 text-gray-700 font-medium">
+            <a href="#" class="hover:text-blue-600 transition">Home</a>
+            <a href="#" class="hover:text-blue-600 transition">About</a>
+            <a href="#" class="hover:text-blue-600 transition">Contact</a>
+        </div>
+
+        <!-- Logout -->
+        <button onclick="logout()" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+            Logout
+        </button>
+
+    </div>
+</nav>
+
+<!-- ---------------- HEADER ---------------- -->
+<header class="text-center py-20">
+    <h1 class="text-5xl font-bold text-blue-700">Welcome Instructor</h1>
+    <p class="text-gray-600 mt-3 text-lg">Manage your projects and student tasks efficiently</p>
+</header>
+
+<!-- ---------------- MAIN DASHBOARD CARDS ---------------- -->
+<section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 pb-20 px-6">
+
+    <!-- Create Project Card -->
+    <div class="bg-white shadow-md rounded-2xl p-8 border hover:shadow-lg transition">
+        <h2 class="text-2xl font-bold text-gray-800 mb-3">Create New Project</h2>
+        <p class="text-gray-600 mb-6">
+            Create new projects and assign them to one or multiple students.
+        </p>
+        <button onclick="window.location.href='CreateProject.html'"
+                class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">
+            Create
+        </button>
+    </div>
+
+    <!-- View Assigned Projects -->
+    <div class="bg-white shadow-md rounded-2xl p-8 border hover:shadow-lg transition">
+        <h2 class="text-2xl font-bold text-gray-800 mb-3">View Assigned Projects</h2>
+        <p class="text-gray-600 mb-6">
+            Check all the projects you have assigned to students.
+        </p>
+        <button onclick="window.location.href='assignedProjects.html'" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">
+            View
+        </button>
+    </div>
+
+    <!-- Track Project -->
+    <div class="bg-white shadow-md rounded-2xl p-8 border hover:shadow-lg transition">
+        <h2 class="text-2xl font-bold text-gray-800 mb-3">Track Progress</h2>
+        <p class="text-gray-600 mb-6">
+            Track the progress of each assigned project in real-time.
+        </p>
+        <button onclick="window.location.href='TrackProgress.html'" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">
+            Track
+        </button>
+    </div>
+
+    <!-- Feedback -->
+    <div class="bg-white shadow-md rounded-2xl p-8 border hover:shadow-lg transition">
+        <h2 class="text-2xl font-bold text-gray-800 mb-3">Feedback</h2>
+        <p class="text-gray-600 mb-6">
+            Review student submissions and provide final feedback or grades.
+        </p>
+        <button onclick="window.location.href='InstructorReview.html'" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition">
+            Provide Feedback
+        </button>
+    </div>
+
+</section>
+<script>
+function logout() {
+    localStorage.removeItem("token");
+    alert("Logged out successfully!");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

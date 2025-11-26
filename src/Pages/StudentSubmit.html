@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Submit Project</title>
+    <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-6">
+
+<h1 class="text-3xl font-bold text-center mb-6">Submit Your Project</h1>
+
+<div class="max-w-xl mx-auto bg-white shadow p-5 rounded-lg">
+
+    <label class="text-lg font-medium">Select Project</label>
+    <select id="projectSelect" class="w-full p-2 border rounded mb-4"></select>
+
+    <label class="text-lg font-medium">Submission Content</label>
+    <textarea id="submissionContent" class="w-full border p-2 rounded mb-4"
+              placeholder="Paste your project link / text"></textarea>
+
+    <button onclick="submitProject()"
+            class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700">
+        Submit Project
+    </button>
+</div>
+
+<script src="/src/Scripts/SubmitProject.js"></script>
+</body>
+</html>
